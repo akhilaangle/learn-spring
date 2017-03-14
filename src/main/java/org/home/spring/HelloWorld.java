@@ -2,6 +2,8 @@ package org.home.spring;
 
 import org.home.spring.model.Caliculator;
 import org.home.spring.model.Greetings;
+import org.home.spring.remote.PhillpsRemote;
+import org.home.spring.remote.Remote;
 
 /**
  * Created by Akhila on 3/8/2017.
@@ -17,8 +19,9 @@ public class HelloWorld {
         System.out.println("Multiplication = " + a);
         int b= Caliculator.division(72, 4);
         System.out.println("Division = "+ b);
-        // add 100, 150.// multiply 34, 40
-                // division 72, 4
+        Remote pr= new PhillpsRemote();
+        pr.up();
     }
+
 
 }
