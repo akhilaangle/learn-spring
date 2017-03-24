@@ -13,16 +13,23 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SpringConfig {
     @Bean
-    public Remote samsungRemote(){
+    public Remote samsungRemote() {
         SamsungRemote sr = new SamsungRemote("SamsungRemote");
         return sr;
     }
 
     @Bean
-    public Remote philipsRemote(){
+    public Remote philipsRemote() {
         PhillpsRemote pr = new PhillpsRemote("PhillpsRemote");
         return pr;
     }
+
+    @Bean(name = "akhilaremote")
+    public Remote toshibaRemote() {
+        ToshibaRemote tr = new ToshibaRemote("ToshibaRemote");
+        return tr;
+    }
+
     @Bean
     public TV  philipsTV(@Qualifier("philipsRemote") Remote remote) {
         PhillpsTv pt = new PhillpsTv(remote);
@@ -31,9 +38,16 @@ public class SpringConfig {
 
 
     @Bean
-    public TV samsungTV(@Qualifier("samsungRemote") Remote remote){
-        SamsungTV st= new SamsungTV(remote);
+    public TV samsungTV(@Qualifier("samsungRemote") Remote r){
+        SamsungTV st= new SamsungTV(r);
             return st;
+
+    }
+
+    @Bean
+    public TV toshibaTV(@Qualifier("akhilaremote") Remote remote){
+        ToshibaTV Tt= new ToshibaTV(remote);
+        return Tt;
 
     }
 }

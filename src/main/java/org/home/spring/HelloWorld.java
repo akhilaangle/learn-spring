@@ -19,7 +19,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class HelloWorld {
     public static void main(String args[]) {
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
-        TV tv =  (PhillpsTv)ac.getBean("philipsTV");
+        TV tv =  (ToshibaTV)ac.getBean("toshibaTV");
 
 //        Remote rmtad = new SamsungAdRemote();
 //        TV tv1 = new SamsungTV(rmtad);
