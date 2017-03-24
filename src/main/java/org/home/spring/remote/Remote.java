@@ -6,4 +6,5 @@ package org.home.spring.remote;
 public interface Remote {
     public void up();
     public void down();
+    public void name();
 }

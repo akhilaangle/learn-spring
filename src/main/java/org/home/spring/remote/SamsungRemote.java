@@ -6,12 +6,16 @@ package org.home.spring.remote;
 public class SamsungRemote implements Remote{
 
 
-    public void up() {
+    public void up()
+    {
         System.out.println("Samsung remote up" );
     }
 
     public void down() {
         System.out.println("Samsung remote down");
 
+    }
+    public void name(){
+        System.out.println("Samsung remote");
     }
 }

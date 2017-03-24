@@ -4,11 +4,16 @@ package org.home.spring.remote;
  * Created by Akhila on 3/13/2017.
  */
 public class PhillpsRemote implements Remote {
-    public void up() {
+    public void up()
+    {
         System.out.println("Phillps remote up");
     }
 
-    public void down() {
+    public void down()
+    {
         System.out.println("Phillps remote down");
+    }
+    public void name(){
+        System.out.println("phillps remote");
     }
 }
