@@ -10,7 +10,11 @@ import org.home.spring.remote.SamsungRemote;
  */
 public class SamsungTV implements TV {
 
-    Remote sr= new SamsungAdRemote();
+    private Remote sr;
+
+    public SamsungTV(Remote sr) {
+        this.sr = sr;
+    }
 
     public void remote() {
         sr.name();
